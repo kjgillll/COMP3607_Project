@@ -14,6 +14,8 @@ public class Year_2_IT_Core_Sem1 {
         courses.add(comp2605);  
         courses.add(info2601); 
         courses.add(info2603);  
+        courses.add(comp1601);  
+        courses.add(info1600);  
 
         return courses;
     }//end

@@ -6,21 +6,31 @@ public class StudentIT implements Student,Visitable{
     private String minor = "Information Technology"; 
     private ArrayList<Courses> registeredCourses;  
     private ArrayList<Courses> completedCourses;   
-    private ArrayList<Courses> availableCourses;
+    private ArrayList<Courses> availableCourses; 
+    private int limit;  
+    private int registerCount = 0;
 
     private double gpa; 
 
     public StudentIT(String name,String major,double gpa, ArrayList<Courses> courses){ 
         this.name = name; 
         this.major = major; 
-        this.gpa = gpa; 
         
         this.registeredCourses = new ArrayList<Courses>();  
         this.availableCourses = new ArrayList<Courses>(); 
-        this.completedCourses = courses;
+        this.completedCourses = courses; 
+
+        if(gpa < 2.00){ 
+            this.limit = 3; 
+        }else{ 
+            this.limit = 5;
+        }//end 
     }//end StudentCS() 
     public void register(Courses course){ 
-
+        if(registerCount < limit){ 
+            this.registeredCourses.add(course); 
+            this.registerCount++;
+        }//end
     }//end register() 
 
     public void accept(Visitor visitor){  

@@ -6,7 +6,7 @@ public class StudentVisitor implements Visitor {
 
     public StudentVisitor(){  
         ArrayList<Courses> CSList = new initCSDepartment().initDepartment(); 
-        ArrayList<Courses> ITList = new initCSDepartment().initDepartment();
+        ArrayList<Courses> ITList = new initITDepartment().initDepartment();
         for(Courses obj: CSList) cs.addCourse(obj); 
         for(Courses obj: ITList) it.addCourse(obj);
     }//end  
@@ -17,7 +17,7 @@ public class StudentVisitor implements Visitor {
     }//end visit()
 
     public void visit(StudentIT student){  
-        System.out.println(student.getCompletedCourses()); 
+        //System.out.println(student.getCompletedCourses()); 
         it.getAvailable(student);
 
     }//end visit() 

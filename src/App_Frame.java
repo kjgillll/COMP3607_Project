@@ -4,8 +4,8 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class App_Frame extends Application { 
@@ -13,13 +13,16 @@ public class App_Frame extends Application {
     @Override
     public void start(Stage primaryStage) {  
         Button btn = new Button();
-        btn.setText("Import Transcript");
-        VBox root = new VBox();
+        btn.setText("Import Transcript"); 
+        Text title = new Text();
+        title.setText("Returning Students Course Recommendations\n\t\t (Minor IT and Minor CS)\n");
+        VBox root = new VBox(); 
+        root.getChildren().add(title); 
         root.getChildren().add(btn); 
-        root.setAlignment(Pos.TOP_CENTER);
+        root.setAlignment(Pos.CENTER);
 
     
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root, 450, 250);
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -34,8 +37,7 @@ public class App_Frame extends Application {
         });
 
 
-
-        primaryStage.setTitle("Returning Students Course Recommendations");
+        primaryStage.setTitle("Group 3a Project Demo");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
