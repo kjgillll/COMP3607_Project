@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+imoprt org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
 
@@ -15,6 +16,11 @@ public class StudentITTest{
     public void setUp(){
         courses.add(info1600);
         Bob = new StudentIT("Bob Saget", "Physics", 2.00, courses);
+    }
+    
+    @AfterEach
+    public void tearDown(){
+        courses.remove(info1600);    
     }
 
     @Test
