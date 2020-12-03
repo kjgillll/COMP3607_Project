@@ -23,7 +23,8 @@ public class Year_3_IT_Elec_Sem2 {
         courses.add(comp3610); 
         courses.add(info2604);  
         courses.add(info3608); 
-        courses.add(info2602); 
+        courses.add(info2602);  
+        courses.add(info1601); 
 
 
         return courses; 

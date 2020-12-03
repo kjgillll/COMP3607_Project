@@ -3,6 +3,7 @@ Food and Nutrition
 Information Technology
 1.96
 COMP 1601 Computer Programming I
+INFO 1601 Introduction to WWW Programming
 INFO 1600 Introduction to Information Technology Concepts
 COMP 2605 Enterprise Database Systems
 INFO 2603 Platform Technologies

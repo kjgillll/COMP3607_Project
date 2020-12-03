@@ -22,7 +22,8 @@ public class RegisterLink {
         this.link.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                student.register(course); 
+                student.register(course);  
+                link.setDisable(true);;
                 updateBtm(); 
             }
         });

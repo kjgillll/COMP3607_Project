@@ -1,6 +1,7 @@
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
@@ -14,12 +15,6 @@ public class CourseRecommedations {
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(15, 20, 10, 10));
         
-        if(student instanceof StudentCS){ 
-            student = (StudentCS) student;
-        }else{ 
-            student = (StudentIT) student;
-        }//end
-        System.out.println(student.getClass());
         StudentVisitor csCourses = new StudentVisitor();    
         // TOP 
         GUI_TOP(student,root);
@@ -31,7 +26,7 @@ public class CourseRecommedations {
         GUI_RIGHT(student, root, csCourses);
         // Set margin for bottom area.
     
-        Scene scene = new Scene(root, 1000, 600);
+        Scene scene = new Scene(root, 1100, 600);
     
         //primaryStage.setTitle("BorderPane Layout Demo");
         window.setScene(scene);  

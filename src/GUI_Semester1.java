@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.BorderPane;
@@ -10,12 +11,18 @@ public class GUI_Semester1 {
     public void render(BorderPane root,Student student,StudentVisitor csCourses){  
         GridPane grid = new GridPane();
         grid.setHgap(10);
-        grid.setVgap(12); 
+        grid.setVgap(12);  
+        ArrayList<Courses> list = new ArrayList<Courses>();
         ArrayList<RegisterLink> semOneRegister = new ArrayList<RegisterLink>();
         StringBuilder availableField = new StringBuilder("Semester 1 Courses\n");  
             student.accept(csCourses); 
-            for(Courses obj : student.getAvailableCourses()){   
-                for(Courses obj2 : new initCSDepartment().getSem1()){
+            for(Courses obj : student.getAvailableCourses()){    
+                if(student instanceof StudentCS){ 
+                    list = new initCSDepartment().getSem1();
+                }else if(student instanceof StudentIT){ 
+                    list = new initITDepartment().getSem1();
+                }//end
+                for(Courses obj2 : list){ 
                     if(obj.getCourseCode().equals(obj2.getCourseCode())){  
                         semOneRegister.add(new RegisterLink(obj,student,root));
                         availableField.append(obj.getCourseCode() + "\n"); 
