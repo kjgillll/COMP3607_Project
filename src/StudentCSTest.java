@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
 
@@ -19,7 +20,11 @@ public class StudentCSTest {
         courses.add(comp1600);  
         Bob = new StudentCS("Bob Saget", "Physics", 2.00, courses);
     }
-
+    
+    @AfterEach
+    public void tearDown(){
+        courses.remove(comp1600)
+    }
 
     @Test
     public void testGetRegisteredCourses(){
