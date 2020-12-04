@@ -5,9 +5,12 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
-
+/** 
+ * The RegisterLink class creates a Link Object that when clicked
+ * adds the Course that corresponds to the link to the link to a 
+ * list Courses the student wishes to register for.
+ */
 public class RegisterLink { 
-    //public static StringBuilder  registered = new StringBuilder("Registered Courses"); 
     private Hyperlink link;
     private Courses course; 
     private BorderPane root; 
@@ -19,16 +22,13 @@ public class RegisterLink {
         this.course = course; 
         this.student = student;
         this.root = root;
-        this.link.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                student.register(course);  
-                link.setDisable(true);;
-                updateBtm(); 
-            }
-        });
-    }//end 
-
+        
+        linkAction();
+    } 
+    /** 
+     * The updateBtm function updates the list of the selected Courses with the 
+     * last Course selected by the Student.
+     */
     public void updateBtm(){  
         StringBuilder x = new StringBuilder("Registered Courses:\n\n");
         for(Courses obj: student.getRegisteredCourses())
@@ -37,26 +37,29 @@ public class RegisterLink {
         text.setText(x.toString());
         root.setBottom(text); 
         BorderPane.setAlignment(text, Pos.BOTTOM_CENTER);
-    
-        // Set margin for bottom area.
         BorderPane.setMargin(text, new Insets(10, 10, 10, 10));
         
     }//end  
+    /**
+     * The linkAction function adds the functionality a to link when clicked.
+     */
+    public void linkAction(){ 
+        this.link.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                student.register(course);  
+                link.setDisable(true);;
+                updateBtm(); 
+            }
+        });
+    } 
 
     public Hyperlink getLink() {
         return link;
-    }
-
-    public void setLink(Hyperlink link) {
-        this.link = link;
     }
 
     public Courses getCourse() {
         return course;
     }
 
-    public void setCourse(Courses course) {
-        this.course = course;
-    }
-    
 }//end

@@ -1,5 +1,11 @@
 import java.util.ArrayList;
-
+/** 
+ * The Year_2_CS_Elec_Sem1 class creates Course objects that model
+ * the different Courses offered during Semester 2 for the Computer 
+ * Science programme. 
+ * 
+ * I couldnt find a possible way to refactor this class.
+ */
 public class Year_3_CS_Elec_Sem2 {
     private ArrayList<Courses> courses = new ArrayList<Courses>(); 
 
@@ -44,5 +50,5 @@ public class Year_3_CS_Elec_Sem2 {
         courses.add(info3608);   
   
         return courses;
-    } //end 
+    } 
 }

@@ -1,47 +1,38 @@
-import java.util.ArrayList;
-
+import java.util.ArrayList; 
+/** 
+ * The Coures class models the Courses available for a 
+ * the Information Technology and Computer Science Degree Programme.
+ */
 public class Courses implements CourseListing {
     private String courseCode;  
     private String title;
-    private int credits; 
     private Courses prerequisite;  
-    private double qualityGrade;
 
     public Courses(String courseCode,int credits,Courses prerequisite,String title){ 
         this.courseCode = courseCode; 
-        this.credits = credits; 
         this.prerequisite = prerequisite; 
         this.title = title;
-    }//end Courses()  
-
-    public Courses(String courseCode,int credits,Courses prerequisite,double qualityGrade,String title){ 
-        this.courseCode = courseCode; 
-        this.credits = credits; 
-        this.prerequisite = prerequisite;  
-        this.title = title;
-        this.qualityGrade = qualityGrade;
-    }//end Courses()
-
+    }  
+    /** 
+     * The getAvailable Function searches through the Student's Completed Courses 
+     * to see if they contain the prerequisites for a given Course.
+     */
     public boolean getAvailable(Student student){   
-        ArrayList<Courses> studentCourses = student.getCompletedCourses(); 
+        ArrayList<Courses> studentCourses = student.getCompletedCourses();  
 
- 
-        for(Courses obj: studentCourses){ 
-            //System.out.println(obj.getCourseCode());   
+        for(Courses obj: studentCourses){  
             if ((this.prerequisite == null)  || (obj.getCourseCode().equals(this.getCourseCode()))) return false;
-        }//end  
+        }
 
-        for(Courses obj: studentCourses){ 
-            //System.out.println(obj.getCourseCode());   
-            if (obj.getCourseCode().equals(this.prerequisite.getCourseCode() )){ 
-                
-                return true;
-            }  
-        }//end  
-        
+        for(Courses obj: studentCourses){    
+            if (obj.getCourseCode().equals(this.prerequisite.getCourseCode() )) return true;
+        }
         return false;
-    }//end getAvailable() 
-
+    } 
+    /**
+     * The getCourseCode Function returns the Course Code and Title for a given Course.
+     * @return
+     */
     public String getCourseCode(){ 
         return this.courseCode+" "+this.title;
     }//end getCourseCode()

@@ -1,5 +1,8 @@
 import java.util.ArrayList;
-
+/**
+ * The StudentIT Class stores Student data for an 
+ * Computer Science Student.
+ */
 public class StudentIT implements Student,Visitable{
     private String name;  
     private String major;
@@ -9,8 +12,6 @@ public class StudentIT implements Student,Visitable{
     private ArrayList<Courses> availableCourses; 
     private int limit;  
     private int registerCount = 0;
-
-    private double gpa; 
 
     public StudentIT(String name,String major,double gpa, ArrayList<Courses> courses){ 
         this.name = name; 
@@ -32,7 +33,9 @@ public class StudentIT implements Student,Visitable{
             this.registerCount++;
         }//end
     }//end register() 
-
+    /**
+     * The accept method passes the StudentCS objecet to the Visitor
+     */
     public void accept(Visitor visitor){  
         visitor.visit(this);
     }//end
@@ -73,13 +76,6 @@ public class StudentIT implements Student,Visitable{
         this.minor = minor;
     }
 
-    public double getGpa() {
-        return gpa;
-    }
-
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
-    }
     public ArrayList<Courses> getAvailableCourses() {
         return availableCourses;
     }

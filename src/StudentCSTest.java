@@ -23,7 +23,7 @@ public class StudentCSTest {
     
     @AfterEach
     public void tearDown(){
-        courses.remove(comp1600)
+        courses.remove(comp1600);
     }
 
     @Test

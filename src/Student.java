@@ -1,5 +1,8 @@
 import java.util.ArrayList;
-
+/** 
+ * The Student interface describes the common behaviour shared
+ * between the StudentCS and StudentIT class.
+ */
 public interface Student {
     public void register(Courses course); 
     public ArrayList<Courses> getRegisteredCourses(); 
@@ -10,4 +13,4 @@ public interface Student {
     public void accept(Visitor visitor);
     public void setAvailableCourses(Courses course); 
     public ArrayList<Courses> getAvailableCourses(); 
-}//end Student()
+}
