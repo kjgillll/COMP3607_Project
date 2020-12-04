@@ -51,14 +51,17 @@ public class GUI_Semester2 {
      * that when clicked adds the chosen Course to the list of Courses the Student wishes to register for.
      * @param grid
      */
-    public void renderLink(GridPane grid){ 
-        int y= 0;
-            for(RegisterLink obj: semtwoRegister){  
-                Text tmp = new Text(); 
-                tmp.setText(obj.getCourse().getCourseCode());    
-                grid.add(tmp,0,y); 
-                grid.add(obj.getLink(),1,y); 
-                y++;
-            }//end  
+    public void renderLink(GridPane grid){  
+        int y= 1;  
+        Text tmp2 = new Text(); 
+        tmp2.setText("Semester 2:"); 
+        grid.add(tmp2, 0, 0);
+        for(RegisterLink obj: semtwoRegister){  
+            Text tmp = new Text(); 
+            tmp.setText(obj.getCourse().getCourseCode());    
+            grid.add(tmp,0,y); 
+            grid.add(obj.getLink(),1,y); 
+            y++;
+        }  
     }
 } 

@@ -11,7 +11,7 @@ import javafx.scene.text.Text;
 public class GUI_Semester1 {  
     ArrayList<Courses> list = new ArrayList<Courses>();
     ArrayList<RegisterLink> semOneRegister = new ArrayList<RegisterLink>();
-    StringBuilder availableField = new StringBuilder("Semester 1 Courses\n");  
+    StringBuilder availableField = new StringBuilder();  
 
     public void render(BorderPane root,Student student){  
         GridPane grid = new GridPane();
@@ -38,7 +38,7 @@ public class GUI_Semester1 {
             }else if(student instanceof StudentIT){ 
                 list = new initITDepartment().getSem1();
             }//end
-            for(Courses obj2 : list){ 
+            for(Courses obj2 : list){  
                 if(obj.getCourseCode().equals(obj2.getCourseCode())){ 
                     semOneRegister.add(new RegisterLink(obj,student,root));
                     availableField.append(obj.getCourseCode() + "\n"); 
@@ -52,9 +52,12 @@ public class GUI_Semester1 {
      * @param grid
      */
     public void renderLink(GridPane grid){ 
-        int x= 0;
+        int x= 1; 
+        Text tmp2 = new Text(); 
+        tmp2.setText("Semester 1:"); 
+        grid.add(tmp2, 0, 0);
         for(RegisterLink obj: semOneRegister){  
-            Text tmp = new Text(); 
+            Text tmp = new Text();  
             tmp.setText(obj.getCourse().getCourseCode());    
             grid.add(tmp,0,x); 
             grid.add(obj.getLink(),1,x); 

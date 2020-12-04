@@ -20,14 +20,13 @@ public class App_Frame extends Application {
      */
     @Override
     public void start(Stage primaryStage) {   
-
         Button btn = new Button();
-        btn.setText("Import Transcript"); 
+        btn.setText("Upload Transcript"); 
         Text title = new Text();
         title.setText("Returning Students Course Recommendations\n\t\t (Minor IT and Minor CS)\n");
-        VBox root = new VBox(); 
+        VBox root = new VBox();   
         root.getChildren().add(title); 
-        root.getChildren().add(btn); 
+        root.getChildren().add(btn);  
         root.setAlignment(Pos.CENTER);
         Scene scene = new Scene(root, 450, 250);
         btnAction(btn,primaryStage);
