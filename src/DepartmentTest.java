@@ -1,6 +1,6 @@
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
@@ -12,9 +12,7 @@ public class DepartmentTest {
     Department dept = new Department();
     StudentCS Bob;
 
-    DepartmentTest(){};
-
-    @BeforeEach
+    @Before
     public void setUpClass(){
         courses.add(comp1600);
         Bob = new StudentCS("Bob Saget", "Physics", 2.00, courses);
@@ -22,7 +20,7 @@ public class DepartmentTest {
         dept.addCourse(comp2601);
     }
 
-    @AfterEach
+    @After
     public void tearDown(){
         courses.remove(comp1600);
         dept.removeCourse(comp2601);

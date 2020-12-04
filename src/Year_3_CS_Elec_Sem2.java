@@ -26,7 +26,6 @@ public class Year_3_CS_Elec_Sem2 {
         Courses comp3609 = new Courses("COMP 3609", 3, comp2603, "Game Programming"); 
         Courses comp3610 = new Courses("COMP 3610", 3, comp3605, "Big Data Anaylytics"); 
         Courses comp3611 = new Courses("COMP 3611", 3, math2250, "Modelling and Simulation"); 
-        Courses comp3612 = new Courses("COMP 3612", 3, comp2611, "Special Topics in Computer Science");  
         Courses info2602 = new Courses("INFO 2602", 3, info1601, "Web Programming and Technologies I") ;
         Courses info2604 = new Courses("INFO 2604", 3, comp1602, "Information Systems Security");
         Courses info3606 = new Courses("INFO 3606", 3, comp3605, "Cloud Computing"); 
@@ -45,7 +44,7 @@ public class Year_3_CS_Elec_Sem2 {
         courses.add(comp3609); 
         courses.add(comp3610);  
         courses.add(comp3611);  
-        courses.add(comp3612);   
+        //courses.add(comp3612);   
         courses.add(info3604);   
         courses.add(info3608);   
   

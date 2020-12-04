@@ -1,0 +1,14 @@
+Mark Henry
+Chemistry
+Computer Science
+3.64
+COMP 1602 Computer Programming II
+COMP 1603 Computer Programming III
+COMP 2611 Data Structures
+INFO 1601 Introduction to WWW Programming
+MATH 2250 Industrial Statistics
+COMP 1600 Introduction to Computing Concepts
+COMP 2603 Object-Oriented Programming I
+COMP 2604 Operating Systems
+COMP 1601 Computer Programming I
+COMP 2601 Computer Architecture

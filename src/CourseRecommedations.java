@@ -42,7 +42,6 @@ public class CourseRecommedations {
         Text text = new Text(); 
         text.setText(student.getName()+"\n"+student.getMajor()+" Minor in "+student.getMinor()+"\n");
         root.setTop(text);  
-        // Set margin for top area.
         BorderPane.setMargin(text, new Insets(10, 10, 10, 10));  
         BorderPane.setAlignment(text, Pos.TOP_CENTER);
     }  

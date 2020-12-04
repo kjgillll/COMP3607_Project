@@ -1,6 +1,7 @@
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -11,17 +12,13 @@ public class StudentCSTest {
 
     Courses comp2601 = new Courses("COMP 2601", 3, comp1600, "Computer Architechture");   
 
-
-
-    public StudentCSTest(){}
-
-    @BeforeEach
+    @Before
     public void setUp(){
         courses.add(comp1600);  
         Bob = new StudentCS("Bob Saget", "Physics", 2.00, courses);
     }
     
-    @AfterEach
+    @After
     public void tearDown(){
         courses.remove(comp1600);
     }
@@ -41,14 +38,6 @@ public class StudentCSTest {
         ArrayList<Courses> expected = courses;
         ArrayList<Courses> actual = Bob.getCompletedCourses();
         assertEquals(expected, actual);  
-    }
-
-    @Test
-    public void testGetAvailableCourses(){
-        ArrayList<Courses> expected = new ArrayList<Courses>();
-        expected.add(comp2601);
-        ArrayList<Courses> actual = Bob.getAvailableCourses();
-        assertEquals(expected, actual);
     }
 
     @Test

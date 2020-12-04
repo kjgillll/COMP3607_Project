@@ -39,7 +39,7 @@ public class GUI_Semester1 {
                 list = new initITDepartment().getSem1();
             }//end
             for(Courses obj2 : list){ 
-                if(obj.getCourseCode().equals(obj2.getCourseCode())){  
+                if(obj.getCourseCode().equals(obj2.getCourseCode())){ 
                     semOneRegister.add(new RegisterLink(obj,student,root));
                     availableField.append(obj.getCourseCode() + "\n"); 
                 } 

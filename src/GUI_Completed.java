@@ -21,6 +21,6 @@ public class GUI_Completed {
         } 
         root.setLeft(grid);
         BorderPane.setMargin(grid, new Insets(10, 10, 10, 10));  
-        BorderPane.setAlignment(grid, Pos.CENTER_LEFT); 
+        BorderPane.setAlignment(grid, Pos.TOP_LEFT);
     }
 }

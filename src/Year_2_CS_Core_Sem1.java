@@ -15,7 +15,7 @@ public class Year_2_CS_Core_Sem1 {
         Courses comp1602 = new Courses("COMP 1602",3,null,"Computer Programming II"); 
         Courses comp1603 = new Courses("COMP 1603",3,null,"Computer Programming III"); 
 
-        Courses comp2601 = new Courses("COMP 2601", 3, comp1600, "Computer Architechture"); 
+        Courses comp2601 = new Courses("COMP 2601", 3, comp1600, "Computer Architecture"); 
         Courses comp2611 = new Courses("COMP 2611", 3, comp1603, "Data Structures");     
 
         courses.add(comp1600);  

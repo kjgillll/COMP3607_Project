@@ -12,6 +12,6 @@
         "c:\\Users\\KJGPC\\Desktop\\COMP 3607\\hamcrest-core-1.3.jar",
         "c:\\Users\\KJGPC\\Desktop\\COMP 3607\\junit-platform-console-standalone-1.7.0-all.jar"
     ],
-    "maven.view": "hierarchical",
+    "maven.view": "flat",
     "java.dependency.packagePresentation": "hierarchical"
 }

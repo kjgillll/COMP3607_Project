@@ -13,23 +13,25 @@
         {
             "type": "java",
             "name": "Debug (Launch)-App<COMP3607_Project_6e91ac2d>",
-            "request": "launch", 
-            "vmArgs": "--module-path \"C:\\Users\\KJGPC\\Desktop\\COMP 3607\\javafx-sdk-11.0.2\\lib\" --add-modules javafx.controls,javafx.fxml",            "mainClass": "App",
+            "request": "launch",
+            "vmArgs": "--module-path \"C:\\Users\\KJGPC\\Desktop\\COMP 3607\\javafx-sdk-11.0.2\\lib\" --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "App",
             "projectName": "COMP3607_Project_6e91ac2d"
         },
         {
             "type": "java",
             "name": "Debug (Launch)-App_Frame<COMP3607_Project_6e91ac2d>",
-            "request": "launch", 
-            "vmArgs": "--module-path \"C:\\Users\\KJGPC\\Desktop\\COMP 3607\\javafx-sdk-11.0.2\\lib\" --add-modules javafx.controls,javafx.fxml", 
+            "request": "launch",
+            "vmArgs": "--module-path \"C:\\Users\\KJGPC\\Desktop\\COMP 3607\\javafx-sdk-11.0.2\\lib\" --add-modules javafx.controls,javafx.fxml",
             "mainClass": "App_Frame",
             "projectName": "COMP3607_Project_6e91ac2d"
         },
         {
             "type": "java",
             "name": "Debug (Launch)-Client",
-            "request": "launch", 
-            "vmArgs": "--module-path \"C:\\Users\\KJGPC\\Desktop\\COMP 3607\\javafx-sdk-11.0.2\\lib\" --add-modules javafx.controls,javafx.fxml",            "mainClass": "Client"
+            "request": "launch",
+            "vmArgs": "--module-path \"C:\\Users\\KJGPC\\Desktop\\COMP 3607\\javafx-sdk-11.0.2\\lib\" --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "Client"
         }
     ]
 }

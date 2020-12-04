@@ -1,24 +1,23 @@
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 public class StudentITTest{
     private StudentIT Bob;
-    private ArrayList<Courses> courses = new ArrayList<>();
+    private ArrayList<Courses> courses = new ArrayList<Courses>();
     private Courses info1600 = new Courses("INFO 1600",3,null,"Introduction to Information Technology Concepts");
     private Courses info2603 = new Courses("INFO 2603", 3, info1600, "Platform Technologies");
 
-    public StudentITTest(){}
-
-    @BeforeEach
+    @Before
     public void setUp(){
         courses.add(info1600);
-        Bob = new StudentIT("Bob Saget", "Physics", 2.00, courses);
+        Bob = new StudentIT("Bob Saget","Physics", 2.00, courses);
     }
     
-    @AfterEach
+    @After
     public void tearDown(){
         courses.remove(info1600);    
     }
@@ -26,7 +25,7 @@ public class StudentITTest{
     @Test
     public void testGetRegisteredCourses(){
         Bob.register(info2603);
-        ArrayList<Courses> expected = new ArrayList<>();
+        ArrayList<Courses> expected = new ArrayList<Courses>();
         expected.add(info2603);
         ArrayList<Courses> actual = Bob.getRegisteredCourses();
         assertEquals(expected, actual);
@@ -38,14 +37,6 @@ public class StudentITTest{
         ArrayList<Courses> expected = courses;
         ArrayList<Courses> actual = Bob.getCompletedCourses();
         assertEquals(expected, actual);  
-    }
-
-    @Test
-    public void testGetAvailableCourses(){
-        ArrayList<Courses> expected = new ArrayList<Courses>();
-        expected.add(info2603);
-        ArrayList<Courses> actual = Bob.getAvailableCourses();
-        assertEquals(expected, actual);
     }
 
     @Test
