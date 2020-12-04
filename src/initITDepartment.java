@@ -17,7 +17,6 @@ public class initITDepartment {
     /**
      * The getSem1 function returns a list of Semester 1 Courses 
      * for the Information Technology programme.
-     * @return
      */
     public ArrayList<Courses> getSem1(){
         ArrayList<Courses> ITList = new ArrayList<Courses>(); 
@@ -29,7 +28,6 @@ public class initITDepartment {
     /**
      * The getSem2 function returns a list of Semester 1 Courses 
      * for the Information Technology programme.
-     * @return
      */
     public ArrayList<Courses> getSem2(){
         ArrayList<Courses> ITList = new ArrayList<Courses>();  

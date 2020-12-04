@@ -21,11 +21,12 @@ public class CourseRecommedations {
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(15, 20, 10, 10));
         
-        StudentVisitor csCourses = new StudentVisitor();    
+        StudentVisitor csCourses = new StudentVisitor();  
+        student.accept(csCourses);   
         GUI_TOP(student,root);
         GUI_LEFT(student, root);
-        GUI_CENTER(student, root, csCourses);
-        GUI_RIGHT(student, root, csCourses);
+        GUI_CENTER(student, root);
+        GUI_RIGHT(student, root);
     
         Scene scene = new Scene(root, 1100, 600);
         window.setScene(scene);  
@@ -62,9 +63,9 @@ public class CourseRecommedations {
      * @param root
      * @param csCourses
      */
-    public void GUI_RIGHT(Student student, BorderPane root,StudentVisitor csCourses){
+    public void GUI_RIGHT(Student student, BorderPane root){
         GUI_Semester2 render3 = new GUI_Semester2(); 
-        render3.render(root,student, csCourses);
+        render3.render(root,student);
     }
     /**
      * The GUI_CENTER function renders the center portion of the GUI that displays the Student's 
@@ -73,9 +74,9 @@ public class CourseRecommedations {
      * @param root
      * @param csCourses
      */
-    public void GUI_CENTER(Student student, BorderPane root,StudentVisitor csCourses){  
+    public void GUI_CENTER(Student student, BorderPane root){  
         GUI_Semester1 render2 = new GUI_Semester1(); 
-        render2.render(root,student,csCourses);
+        render2.render(root,student);
     }
 
 }

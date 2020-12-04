@@ -16,7 +16,6 @@ public class initCSDepartment {
     /**
      * The getSem1 function returns a list of Semester 1 Courses 
      * for the Computer Science programme.
-     * @return
      */
     public ArrayList<Courses> getSem1(){ 
         ArrayList<Courses> courseList = new ArrayList<Courses>(); 
@@ -28,7 +27,6 @@ public class initCSDepartment {
     /**
      * The getSem2 function returns a list of Semester 1 Courses 
      * for the Computer Science programme.
-     * @return
      */
     public ArrayList<Courses> getSem2(){ 
         ArrayList<Courses> courseList = new ArrayList<Courses>(); 

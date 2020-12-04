@@ -44,7 +44,7 @@ public class RegisterLink {
      * The linkAction function adds the functionality a to link when clicked.
      */
     public void linkAction(){ 
-        this.link.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
+        link.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
                 student.register(course);  

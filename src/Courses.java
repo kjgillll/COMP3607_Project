@@ -21,11 +21,15 @@ public class Courses implements CourseListing {
         ArrayList<Courses> studentCourses = student.getCompletedCourses();  
 
         for(Courses obj: studentCourses){  
-            if ((this.prerequisite == null)  || (obj.getCourseCode().equals(this.getCourseCode()))) return false;
+            if ((this.prerequisite == null)  || (obj.getCourseCode().equals(this.getCourseCode()))) { 
+                return false;
+            }
         }
 
         for(Courses obj: studentCourses){    
-            if (obj.getCourseCode().equals(this.prerequisite.getCourseCode() )) return true;
+            if (obj.getCourseCode().equals(this.prerequisite.getCourseCode())){ 
+                return true;
+            } 
         }
         return false;
     } 
