@@ -5,9 +5,10 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({				
   StudentCSTest.class,
   StudentITTest.class,  		 
-  DepartmentTest.class,	
+  DepartmentTest.class, 
+  CoursesTesting.class,	
 })		
 
 public class ProjectTestSuite {	
-    
+
 }

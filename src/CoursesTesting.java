@@ -1,6 +1,6 @@
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,14 +14,14 @@ public class CoursesTesting {
        
     public CoursesTesting(){}
     
-    @BeforeEach
+    @Before
     public void setUp(){
         courses.add(comp1600);
-        comp2601 = new Courses("COMP 2601", 3, comp1600, "Computer Architechture");
+        comp2601 = new Courses("COMP 2601", 3, comp1600, "Computer Architecture");
         Bob = new StudentCS("Bob Saget", "Physics", 2.00, courses);
     }
     
-    @AfterEach
+    @After
     public void tearDown(){
         courses.remove(comp1600);
     }
